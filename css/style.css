@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   color: #333;
 }
 
@@ -393,6 +393,7 @@ template {
   color: #333;
   padding: 0 75px 0 23px;
   border: none;
+  outline: none;
   border-radius: 6px;
 }
 
@@ -406,6 +407,7 @@ template {
   border-radius: 0px 6px 6px 0px;
   background-color: #EC1F46;
   cursor: pointer;
+  outline: none;
 }
 
 .user {
@@ -430,4 +432,3 @@ template {
   color: #333;
   margin-left: 18px;
 }
-/*# sourceMappingURL=style.css.map */

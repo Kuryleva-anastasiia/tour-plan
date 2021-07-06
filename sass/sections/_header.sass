@@ -1,5 +1,5 @@
 .header
-    background-color: #fff
+    background-color: $header-bgc
     &-top
         display: flex
         padding: 40px 0
@@ -14,12 +14,13 @@
     height: 40px
     &__input
         width: 350px
-        background-color: #F5FAFE
+        background-color: $input-bgc
         font-size: 12px
         line-height: 15px
         color: $text-color
         padding: 0 75px 0 23px
         border: none
+        outline: none
         border-radius: 6px
     &__button
         position: absolute
@@ -31,6 +32,7 @@
         border-radius: 0px 6px 6px 0px
         background-color: $default-color
         cursor: pointer
+        outline: none
 .user
     display: flex
     align-items: center
