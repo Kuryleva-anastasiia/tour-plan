@@ -377,6 +377,34 @@ template {
   margin: 0 auto 0 108px;
 }
 
+.nav {
+  background-color: #0A223D;
+  padding: 31px 0;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  padding: 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.nav-list__link {
+  color: #fff;
+  text-decoration: none;
+}
+
 .search {
   position: relative;
   display: -webkit-box;
