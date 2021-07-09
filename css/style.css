@@ -5,6 +5,7 @@
 
 body {
   font-family: "Mulish", sans-serif;
+  background-color: #F5FAFE;
   color: #333;
 }
 
@@ -471,6 +472,40 @@ template {
 .user__name {
   color: #333;
   margin-left: 18px;
+}
+
+.breadcrumbs {
+  background-color: inherit;
+  padding: 18px 0;
+}
+
+.breadcrumbs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs-list__item {
+  font-size: 10px;
+  line-height: 13px;
+  color: #0A223D;
+}
+
+.breadcrumbs-list__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.breadcrumbs-list__link::after {
+  content: '/';
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 @media (max-width: 1200px) {
