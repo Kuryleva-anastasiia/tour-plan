@@ -46,8 +46,26 @@
             height: 2px
             width: 16px
             background-color: $text-color
+.hotel
+    &-text
+        padding-top: 10px
 @media ( max-width: 576px )
     .container
         max-width: 90%
     .logo
         width: 100px
+    .hotel
+        &-info
+            &__name
+                font-size: 18px
+        &-rating
+            display: none
+            background-color: $text-color
+
+@media ( max-width: 340px )
+    .hotel
+        &-info
+            flex-direction: column
+            align-items: flex-start
+            &__offer
+                order: -1
