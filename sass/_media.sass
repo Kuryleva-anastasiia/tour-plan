@@ -55,17 +55,22 @@
     .logo
         width: 100px
     .hotel
+        &-text
+            width: 100%
         &-info
+            justify-content: space-between
+            align-items: baseline
+            &__stars
+                flex-basis: auto
+                margin-bottom: 10px
+            &__offer
+                order: -1
+                margin-bottom: 10px
             &__name
-                font-size: 18px
+                margin-right: 0
+                flex-basis: 100%
         &-rating
             display: none
             background-color: $text-color
 
-@media ( max-width: 340px )
-    .hotel
-        &-info
-            flex-direction: column
-            align-items: flex-start
-            &__offer
-                order: -1
+// @media ( max-width: 320px )

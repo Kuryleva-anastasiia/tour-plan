@@ -407,6 +407,7 @@ template {
           align-items: center;
   list-style-type: none;
   padding: 0;
+  margin: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
@@ -520,8 +521,21 @@ template {
           align-items: center;
 }
 
+.hotel-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .hotel-info__stars {
   margin-bottom: 4px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .hotel-info__name {
@@ -549,15 +563,6 @@ template {
   font-size: 12px;
   line-height: 15px;
   margin: 0;
-}
-
-.hotel-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .hotel-rating {
@@ -677,28 +682,35 @@ template {
   .logo {
     width: 100px;
   }
-  .hotel-info__name {
-    font-size: 18px;
+  .hotel-text {
+    width: 100%;
   }
-  .hotel-rating {
-    display: none;
-    background-color: #333;
-  }
-}
-
-@media (max-width: 340px) {
   .hotel-info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .hotel-info__stars {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    margin-bottom: 10px;
   }
   .hotel-info__offer {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    margin-bottom: 10px;
+  }
+  .hotel-info__name {
+    margin-right: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .hotel-rating {
+    display: none;
+    background-color: #333;
   }
 }
