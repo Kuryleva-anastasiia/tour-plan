@@ -12,4 +12,8 @@ var swiper = new Swiper('.swiper-container', {
   cubeEffect: {
     shadow: false
   },
+
+  keyboard: {
+    enabled: true,
+  },
 });
