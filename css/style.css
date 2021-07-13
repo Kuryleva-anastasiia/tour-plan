@@ -802,13 +802,6 @@ template {
   color: inherit;
 }
 
-.map {
-  background-color: #0A223D;
-  width: 347px;
-  min-height: 213px;
-  border-radius: 10px;
-}
-
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
