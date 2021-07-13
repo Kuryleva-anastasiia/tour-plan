@@ -1,11 +1,11 @@
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.hotel-slider__container', {
   
   loop: true,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button--next',
-    prevEl: '.swiper-button--prev',
+    nextEl: '.hotel-slider__button_next',
+    prevEl: '.hotel-slider__button_prev',
   },
 
   effect: "cube",
