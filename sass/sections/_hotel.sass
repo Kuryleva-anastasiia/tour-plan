@@ -94,6 +94,15 @@
         display: flex
         justify-content: space-between
         margin-bottom: 70px
+        &__wrapper
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+    &-map
+        width: 347px
+        height: 213px
+        border-radius: 10px
 
 .booking
     background-color: $dark
@@ -102,12 +111,6 @@
     min-width: 350px
     font-family: $secondary-font
     color: $light
-    &-map
-        &__wrapper
-            display: flex
-            flex-direction: column
-            justify-content: space-between
-            align-items: center
     &-wrapper
         display: flex
         justify-content: space-between
@@ -165,7 +168,3 @@
         line-height: 19px
         min-height: 45px
         color: inherit
-.hotel-map
-    width: 347px
-    height: 213px
-    border-radius: 10px

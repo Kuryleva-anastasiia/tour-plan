@@ -29,14 +29,12 @@
         &-grid
             flex-direction: column
             margin-bottom: 60px
+            &__wrapper
+                flex-direction: row
+                justify-content: space-between
+                margin-top: 30px
         &-slider
             width: 100%
-
-    .booking-map
-        &__wrapper
-            flex-direction: row
-            justify-content: space-between
-            margin-top: 30px
 
 @media ( max-width: 800px )
     .container
@@ -67,15 +65,15 @@
             padding-top: 10px
         &-slider
             height: 350px
-    .booking-map
-        &__wrapper
-            flex-direction: column
-            margin-top: 20px
+        &-grid
+            &__wrapper
+                flex-direction: column
+                margin-top: 20px
+        &-map
+            width: 100%
     .booking
         min-width: 100%
         margin-bottom: 20px
-    .hotel-map
-        width: 100%
 
 @media ( max-width: 576px )
     .container
