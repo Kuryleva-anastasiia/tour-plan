@@ -16,4 +16,5 @@ var swiper = new Swiper('.hotel-slider__container', {
   keyboard: {
     enabled: true,
   },
+
 });
