@@ -74,17 +74,12 @@
                 background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
                 z-index: 10
         &__button
-            position: absolute
+            +slider-arrows
             top: 50%
             transform: translateY(-50%)
             height: 30px
             width: 30px
-            border: none
-            background-color: transparent
-            background-repeat: no-repeat
-            background-position: center center
             z-index: 20
-            cursor: pointer
             &_next
                 right: 0
                 background-image: url(../img/arrow-next.svg)
