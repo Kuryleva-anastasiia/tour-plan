@@ -76,3 +76,7 @@ ymaps.ready(init);
         }));
     }
 
+$('.newsletter').parallax({
+    imageSrc: '../../img/newsletter-bg.jpg',
+    speed: 0.1
+});
