@@ -4,6 +4,13 @@
     .hotel
         &-slider
             width: 590px
+    .activities
+        padding-bottom: 70px
+        &-wrapper
+            flex-wrap: wrap
+    .card
+        width: 45%
+        margin-bottom: 20px
 @media ( max-width: 992px )
     .container
         max-width: 760px
@@ -116,6 +123,8 @@
                     left: 50%
                     transform: translateX(-50%)
                     margin-left: -100px
+    .card
+        width: 48%
 
 @media ( max-width: 576px )
     .container
@@ -166,6 +175,14 @@
                     display: none
                 &::before
                     display: none
+    .activities
+        padding: 40px 0 60px
+        &__title
+            font-size: 18px
+            line-height: 23px
+            margin-bottom: 36px
+    .card
+        width: 100%
 
 @media ( max-width: 480px )
     .hotel
