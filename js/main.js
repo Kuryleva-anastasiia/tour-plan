@@ -1,4 +1,4 @@
-var swiper = new Swiper('.hotel-slider__container', {
+var hotelSwiper = new Swiper('.hotel-slider__container', {
   
   loop: true,
 
@@ -11,6 +11,22 @@ var swiper = new Swiper('.hotel-slider__container', {
   effect: "cube",
   cubeEffect: {
     shadow: false
+  },
+
+  keyboard: {
+    enabled: true,
+  },
+
+});
+
+var reviewsSwiper = new Swiper('.reviews-slider', {
+  
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews-slider__button--next',
+    prevEl: '.reviews-slider__button--prev',
   },
 
   keyboard: {
@@ -60,4 +76,3 @@ ymaps.ready(init);
         }));
     }
 
-    
