@@ -19,6 +19,11 @@ var hotelSwiper = new Swiper('.hotel-slider__container', {
 
 });
 
+$('.newsletter').parallax({
+    imageSrc: 'img/newsletter-bg.jpg',
+    speed: 0.1
+});
+
 var reviewsSwiper = new Swiper('.reviews-slider', {
   
   loop: true,
@@ -75,8 +80,3 @@ ymaps.ready(init);
             iconColor: '#0095b6'
         }));
     }
-
-$('.newsletter').parallax({
-    imageSrc: '../img/newsletter-bg.jpg',
-    speed: 0.1
-});
