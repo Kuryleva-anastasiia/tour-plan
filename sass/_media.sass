@@ -83,16 +83,47 @@
                 margin-left: 0
                 margin-right: 0
 @media ( max-width: 800px )
+    body
+        padding-top: 74px
     .container
         max-width: 560px
     .header
+        &_mobile
+            &_fixed
+                position: fixed
+                left: 0
+                right: 0
+                top: 0
+                z-index: 99
         &-top
             padding: 28px 0
             &__search, &__user
-                display: none
+                &_mobile
+                    &_hidden
+                        display: none
+                    &_visible
+                        display: flex
 
         &__nav
             display: none
+            position: fixed
+            left: 0
+            bottom: 0
+            right: 0
+            top: 74px
+            &_mobile
+                &_visible
+                    display: block
+    .nav
+        &-list
+            padding-top: 31px
+            flex-direction: column
+            &__item:not(:last-child)
+                margin-bottom: 20px
+            &__item
+                &_mobile
+                    &_visible
+                        display: flex
     .menu-btn
         display: flex
         flex-direction: column
@@ -106,6 +137,19 @@
             height: 2px
             width: 16px
             background-color: $text-color
+    .search
+        margin-top: 7px
+        margin-bottom: 20px
+        &__input
+            max-width: 250px
+    .user
+        flex-direction: column
+        &__name
+            text-transform: capitalize
+            color: $light
+            margin-left: 0
+            margin-top: 10px
+            font-size: 14px
     .hotel
         &-text
             padding-top: 10px

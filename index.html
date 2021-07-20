@@ -22,9 +22,9 @@
     ></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header header_mobile_fixed">
       <div class="container">
-        <div class="header-top">
+        <div class="header-top header-top_mobile_fixed">
           <a href="#" class="logo">
             <img
               src="img/horizontal-logo.svg"
@@ -32,7 +32,10 @@
               class="logo__img"
             />
           </a>
-          <form action="#" class="search header-top__search">
+          <form
+            action="#"
+            class="search header-top__search header-top__search_mobile_hidden"
+          >
             <input
               type="text"
               class="search__input"
@@ -46,7 +49,10 @@
               />
             </button>
           </form>
-          <a href="#" class="user header-top__user">
+          <a
+            href="#"
+            class="user header-top__user header-top__user_mobile_hidden"
+          >
             <img
               src="img/user-avatar.jpg"
               alt="Avatar: Nathan"
@@ -64,9 +70,44 @@
         <!-- /.header-top -->
       </div>
       <!-- /.container -->
-      <nav class="nav header__nav">
+      <nav class="nav header__nav header__nav_mobile_hidden">
         <div class="container">
           <ul class="nav-list">
+            <li class="nav-list__item nav-list__item_mobile_visible">
+              <a
+                href="#"
+                class="user header-top__user header-top__user_mobile_visible"
+              >
+                <img
+                  src="img/user-avatar.jpg"
+                  alt="Avatar: Nathan"
+                  class="user__avatar"
+                />
+                <span class="user__name">Nathan</span>
+              </a>
+            </li>
+            <li class="nav-list__item nav-list__item_mobile_visible">
+              <form
+                action="#"
+                class="
+                  search
+                  header-top__search header-top__search_mobile_visible
+                "
+              >
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Search Location"
+                />
+                <button class="search__button">
+                  <img
+                    src="img/search.svg"
+                    alt="Icon: search"
+                    class="search__img"
+                  />
+                </button>
+              </form>
+            </li>
             <li class="nav-list__item">
               <a href="#" class="nav-list__link">All Deals</a>
             </li>

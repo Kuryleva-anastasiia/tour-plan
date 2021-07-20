@@ -28,6 +28,10 @@
         &__link
             color: $light
             text-decoration: none
+        &__item
+            &_mobile
+                &_visible
+                    display: none
 
 .search
     position: relative
@@ -66,3 +70,5 @@
     &__name
         color: $text-color
         margin-left: 18px
+.menu-opened
+    overflow: hidden
