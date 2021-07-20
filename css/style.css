@@ -1219,6 +1219,11 @@ template {
           align-items: start;
 }
 
+.footer__contact-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer__title {
   margin-top: 0;
   margin-bottom: 16px;
