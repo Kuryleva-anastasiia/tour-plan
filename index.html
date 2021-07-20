@@ -571,10 +571,16 @@
                   alt="Icon: phone call"
                   class="footer__img"
                 />
-                Tel (business hours) : 269 1500<br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
-                pm)<br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <span>
+                  Tel (business hours) :
+                  <a href="tel:269 1500" class="footer__link">269 1500</a><br />
+                  Tel (hotline) Monday - Saturday:
+                  <a href="tel:52-56-61-38" class="footer__link">52-56-61-38</a>
+                  (08:00 am – 20:00 pm)<br />
+                  Tel (hotline) Sunday:
+                  <a href="tel:52-56-61-38" class="footer__link">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)
+                </span>
               </li>
               <li class="footer__item footer__contact-item">
                 <img
@@ -582,7 +588,9 @@
                   alt="Icon: email"
                   class="footer__img"
                 />
-                cherly.lawson@example.com
+                <a href="mailto:cherly.lawson@example.com" class="footer__link"
+                  >cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>
@@ -594,11 +602,13 @@
                 type="text"
                 class="input footer__input"
                 placeholder="Your Full Name*"
+                required
               />
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Phone Number*"
+                required
               />
               <textarea
                 class="footer__message"
