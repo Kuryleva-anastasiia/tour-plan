@@ -386,6 +386,10 @@ template {
   display: none;
 }
 
+.menu_btn_close {
+  display: none;
+}
+
 .logo {
   width: 177px;
 }
@@ -1523,6 +1527,46 @@ template {
 }
 
 @media (max-width: 800px) {
+  @-webkit-keyframes menu {
+    0% {
+      display: none;
+      height: 0;
+    }
+    100% {
+      display: block;
+      height: 100%;
+    }
+  }
+  @keyframes menu {
+    0% {
+      display: none;
+      height: 0;
+    }
+    100% {
+      display: block;
+      height: 100%;
+    }
+  }
+  @-webkit-keyframes nav-list {
+    0% {
+      display: block;
+      opacity: 0;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+  @keyframes nav-list {
+    0% {
+      display: block;
+      opacity: 0;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
   body {
     padding-top: 74px;
   }
@@ -1556,6 +1600,8 @@ template {
     top: 74px;
   }
   .header__nav_mobile_visible {
+    -webkit-animation: nav-list 500ms linear 0s 1 normal forwards;
+            animation: nav-list 500ms linear 0s 1 normal forwards;
     display: block;
   }
   .nav-list {
@@ -1574,6 +1620,7 @@ template {
     display: flex;
   }
   .menu-btn {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1594,6 +1641,29 @@ template {
     height: 2px;
     width: 16px;
     background-color: #333;
+    -webkit-transform: rotate(0%);
+            transform: rotate(0%);
+    -webkit-transition: -webkit-transform 500ms 0s linear;
+    transition: -webkit-transform 500ms 0s linear;
+    transition: transform 500ms 0s linear;
+    transition: transform 500ms 0s linear, -webkit-transform 500ms 0s linear;
+  }
+  .menu-btn_top_rotate {
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 6px;
+    right: 0;
+  }
+  .menu-btn_middle_hidden {
+    display: none;
+  }
+  .menu-btn_bottom_rotate {
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 6px;
+    right: 0;
   }
   .search {
     margin-top: 7px;

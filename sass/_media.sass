@@ -83,6 +83,20 @@
                 margin-left: 0
                 margin-right: 0
 @media ( max-width: 800px )
+    @keyframes menu
+        0%
+            display: none
+            height: 0
+        100%
+            display: block
+            height: 100%
+    @keyframes nav-list
+        0%
+            display: block
+            opacity: 0
+        100%
+            display: block
+            opacity: 1
     body
         padding-top: 74px
     .container
@@ -113,6 +127,7 @@
             top: 74px
             &_mobile
                 &_visible
+                    animation: nav-list 500ms linear 0s 1 normal forwards
                     display: block
     .nav
         &-list
@@ -125,6 +140,7 @@
                     &_visible
                         display: flex
     .menu-btn
+        position: relative
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -137,6 +153,21 @@
             height: 2px
             width: 16px
             background-color: $text-color
+            transform: rotate(0%)
+            transition: transform 500ms 0s linear
+        &_top_rotate
+            position: absolute
+            transform: rotate(45deg)
+            top: 6px
+            right: 0
+        &_middle_hidden
+            display: none
+        &_bottom_rotate
+            position: absolute
+            transform: rotate(-45deg)
+            top: 6px
+            right: 0
+
     .search
         margin-top: 7px
         margin-bottom: 20px
