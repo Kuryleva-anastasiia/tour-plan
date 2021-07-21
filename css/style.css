@@ -448,15 +448,16 @@ template {
 }
 
 .search__button {
+  background-color: #EC1F46;
+  border: none;
+  cursor: pointer;
+  color: #fff;
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 65px;
-  border: none;
   border-radius: 0px 6px 6px 0px;
-  background-color: #EC1F46;
-  cursor: pointer;
   outline: none;
 }
 
@@ -810,17 +811,17 @@ template {
 }
 
 .booking__button {
-  margin-top: 17px;
-  background: #EC1F46;
-  border-radius: 4px;
+  background-color: #EC1F46;
   border: none;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 17px;
+  border-radius: 4px;
   width: 100%;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   min-height: 45px;
-  color: inherit;
-  cursor: pointer;
 }
 
 .newsletter {
@@ -901,19 +902,19 @@ template {
 }
 
 .subscribe__button {
+  background-color: #EC1F46;
+  border: none;
+  cursor: pointer;
+  color: #fff;
   position: absolute;
   top: 0;
   right: 0;
-  border: none;
   border-radius: 0 4px 4px 0;
-  background-color: #EC1F46;
   height: 100%;
   padding: 20px 18px;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #fff;
-  cursor: pointer;
 }
 
 .reviews {
@@ -1129,16 +1130,16 @@ template {
 }
 
 .card__button {
-  padding: 7px 22px;
-  background: #EC1F46;
+  background-color: #EC1F46;
   border: none;
-  border-radius: 4px;
+  cursor: pointer;
   color: #fff;
+  padding: 7px 22px;
+  border-radius: 4px;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-  cursor: pointer;
 }
 
 .footer {
@@ -1353,15 +1354,15 @@ template {
 }
 
 .footer__button {
+  background-color: #EC1F46;
+  border: none;
+  cursor: pointer;
+  color: #fff;
   padding: 17px 65px;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #fff;
-  background-color: #EC1F46;
   border-radius: 4px;
-  border: none;
-  cursor: pointer;
 }
 
 .footer__info {
