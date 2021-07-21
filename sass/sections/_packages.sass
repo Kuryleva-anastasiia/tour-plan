@@ -12,6 +12,8 @@
         display: grid
         grid-template-columns: repeat (3, minmax(min-content, 350px) )
         grid-template-rows: repeat (2, minmax(500px, min-content))
+        grid-auto-columns: minmax(min-content, 350px)
+        grid-auto-rows: minmax(500px, min-content)
         grid-gap: 20px
     &-card
         position: relative
@@ -42,10 +44,12 @@
             height: 250px
             object-fit: cover
             border-radius: 8px 8px 0px 0px
+            overflow: hidden
             &_big
-                width: 360px
+                width: 50%
                 height: 100%
                 border-radius: 8px 0px 0px 8px
+                overflow: hidden
         &__offer
             position: absolute
             top: 26px
@@ -69,10 +73,12 @@
             background: $dark
             padding: 30px 21px 25px 32px
             border-radius: 0px 0px 8px 8px
+            overflow: hidden
             &_big
+                width: 50%
                 padding: 46px 21px 30px 43px
-                max-width: 364px
                 border-radius: 0px 8px 8px 0px
+                overflow: hidden
         &__title
             margin: 0
             font-weight: bold
@@ -107,6 +113,10 @@
             +default-button
             padding: 10px 26px
             border-radius: 4px
+            font-family: $secondary-font
+            font-weight: 600
+            font-size: 14px
+            line-height: 19px
         &__wrapper
             display: flex
             justify-content: space-between

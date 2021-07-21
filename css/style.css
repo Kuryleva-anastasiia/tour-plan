@@ -847,6 +847,10 @@ template {
   -ms-grid-rows: repeat 2, minmax(500px, min-content);
       grid-template-rows: repeat 2, minmax(500px, -webkit-min-content);
       grid-template-rows: repeat 2, minmax(500px, min-content);
+  grid-auto-columns: minmax(-webkit-min-content, 350px);
+  grid-auto-columns: minmax(min-content, 350px);
+  grid-auto-rows: minmax(500px, -webkit-min-content);
+  grid-auto-rows: minmax(500px, min-content);
   grid-gap: 20px;
 }
 
@@ -928,12 +932,14 @@ template {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px 8px 0px 0px;
+  overflow: hidden;
 }
 
 .packages-card__img_big {
-  width: 360px;
+  width: 50%;
   height: 100%;
   border-radius: 8px 0px 0px 8px;
+  overflow: hidden;
 }
 
 .packages-card__offer {
@@ -970,12 +976,14 @@ template {
   background: #0A223D;
   padding: 30px 21px 25px 32px;
   border-radius: 0px 0px 8px 8px;
+  overflow: hidden;
 }
 
 .packages-card__content_big {
+  width: 50%;
   padding: 46px 21px 30px 43px;
-  max-width: 364px;
   border-radius: 0px 8px 8px 0px;
+  overflow: hidden;
 }
 
 .packages-card__title {
@@ -1040,6 +1048,10 @@ template {
   color: #fff;
   padding: 10px 26px;
   border-radius: 4px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .packages-card__wrapper {
@@ -1645,6 +1657,19 @@ template {
   .hotel-slider {
     width: 590px;
   }
+  .packages-wrapper {
+    grid-gap: 10px;
+    -ms-grid-rows: minmax(460px, min-content) minmax(460px, min-content);
+        grid-template-rows: minmax(460px, -webkit-min-content) minmax(460px, -webkit-min-content);
+        grid-template-rows: minmax(460px, min-content) minmax(460px, min-content);
+  }
+  .packages-card {
+    height: 460px;
+    width: 310px;
+  }
+  .packages-card_big {
+    width: 630px;
+  }
   .activities {
     padding-bottom: 70px;
   }
@@ -1700,6 +1725,54 @@ template {
   }
   .hotel-slider {
     width: 100%;
+  }
+  .packages-wrapper {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: minmax(460px, min-content) minmax(460px, min-content) minmax(460px, min-content);
+        grid-template-rows: minmax(460px, -webkit-min-content) minmax(460px, -webkit-min-content) minmax(460px, -webkit-min-content);
+        grid-template-rows: minmax(460px, min-content) minmax(460px, min-content) minmax(460px, min-content);
+    grid-auto-rows: minmax(460px, -webkit-min-content);
+    grid-auto-rows: minmax(460px, min-content);
+    grid-gap: 30px;
+  }
+  .packages-card {
+    width: 100%;
+  }
+  .packages-card_1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 1/1/2/3;
+  }
+  .packages-card_2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2;
+  }
+  .packages-card_3 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2/2/3/3;
+  }
+  .packages-card_4 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3/1/4/2;
+  }
+  .packages-card_5 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 3/2/4/3;
   }
   .newsletter-wrapper {
     padding: 92px 0;
@@ -1931,6 +2004,9 @@ template {
   .hotel-slider {
     height: 350px;
   }
+  .hotel-grid {
+    margin-bottom: 30px;
+  }
   .hotel-grid__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1944,6 +2020,80 @@ template {
   .booking {
     min-width: 100%;
     margin-bottom: 20px;
+  }
+  .packages {
+    padding: 20px 0 35px;
+  }
+  .packages__title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .packages-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: repeat 5, minmax(460px, min-content);
+        grid-template-rows: repeat 5, minmax(460px, -webkit-min-content);
+        grid-template-rows: repeat 5, minmax(460px, min-content);
+    grid-gap: 20px;
+  }
+  .packages-card {
+    max-width: 350px;
+    min-height: 500px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .packages-card_big {
+    min-height: 625px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 350px;
+  }
+  .packages-card__img_big {
+    width: 100%;
+    max-height: 155px;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .packages-card_1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    grid-area: 1/1/2/1;
+  }
+  .packages-card_2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    grid-area: 2/1/3/1;
+  }
+  .packages-card_3 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    grid-area: 3/1/4/1;
+  }
+  .packages-card_4 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    grid-area: 4/1/5/1;
+  }
+  .packages-card_5 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    grid-area: 5/1/6/1;
+  }
+  .packages-card__content_big {
+    padding: 26px 21px;
+    width: 100%;
+    height: 460px;
+    border-radius: 0px 0px 8px 8px;
   }
   .newsletter-wrapper {
     max-width: 100%;
@@ -2128,6 +2278,9 @@ template {
   .hotel-slider {
     height: 260px;
   }
+  .packages-card {
+    width: 100%;
+  }
   .subscribe {
     width: 100%;
   }
@@ -2175,5 +2328,8 @@ template {
 @media (max-width: 400px) {
   .hotel-slider {
     height: 240px;
+  }
+  .packages-card__button {
+    padding: 8px 12px;
   }
 }
