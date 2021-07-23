@@ -472,11 +472,16 @@
             subscribe to our
             <span class="newsletter-title__strong">Newsletter</span>
           </h2>
-          <form action="#" class="subscribe newsletter__subscribe">
+          <form
+            action="send.php"
+            method="POST"
+            class="subscribe newsletter__subscribe"
+          >
             <input
               type="text"
               class="subscribe__input"
               placeholder="Your email address"
+              name="email"
             />
             <button class="subscribe__button">Send</button>
           </form>
@@ -862,6 +867,46 @@
       </div>
       <!-- /.container -->
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <h3 class="modal__title">Booking</h3>
+        <form action="send.php" method="POST" class="modal__form">
+          <img src="img/close.svg" alt="Icon: close" class="modal__close" />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            required
+            name="name"
+          />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Phone Number*"
+            required
+            name="phone"
+          />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Email*"
+            required
+            name="email"
+          />
+          <textarea
+            class="modal__message"
+            placeholder="Message"
+            name="message"
+          ></textarea>
+          <button class="button modal__button">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.model__dialog -->
+    </div>
+    <!-- /.modal -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
