@@ -1,3 +1,14 @@
+var menuButton = document.querySelector('.menu-btn');
+
+menuButton.addEventListener('click', function(){
+  console.log('Клик');
+  document.querySelector('.header__nav').classList.toggle('header__nav_mobile_visible');
+  document.querySelector('body').classList.toggle('menu-opened');
+  document.querySelector('.menu-btn_top').classList.toggle('menu-btn_top_rotate');
+  document.querySelector('.menu-btn_middle').classList.toggle('menu-btn_middle_hidden');
+  document.querySelector('.menu-btn_bottom').classList.toggle('menu-btn_bottom_rotate');
+});
+
 var hotelSwiper = new Swiper('.hotel-slider__container', {
   
   loop: true,

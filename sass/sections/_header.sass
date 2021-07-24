@@ -9,6 +9,10 @@
             margin: 0 auto 0 108px
         &__menu-btn
             display: none
+.menu
+    &_btn
+        &_close
+            display: none
 .logo
     width: 177px
 .nav
@@ -28,6 +32,10 @@
         &__link
             color: $light
             text-decoration: none
+        &__item
+            &_mobile
+                &_visible
+                    display: none
 
 .search
     position: relative
@@ -44,15 +52,13 @@
         outline: none
         border-radius: 6px
     &__button
+        +default-button
         position: absolute
         top: 0
         right: 0
         height: 100%
         width: 65px
-        border: none
         border-radius: 0px 6px 6px 0px
-        background-color: $default-color
-        cursor: pointer
         outline: none
 .user
     display: flex
@@ -66,3 +72,5 @@
     &__name
         color: $text-color
         margin-left: 18px
+.menu-opened
+    overflow: hidden
