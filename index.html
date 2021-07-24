@@ -278,7 +278,9 @@
                 </a>
               </div>
               <!-- /.booking__by-telephone -->
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" class="button booking__button">
+                View Other Options
+              </button>
             </div>
             <!-- /.booking-wrapper -->
             <div id="hotel-map" class="hotel-map"></div>
@@ -873,7 +875,9 @@
       <div class="modal__dialog">
         <h3 class="modal__title">Booking</h3>
         <form action="send.php" method="POST" class="modal__form">
-          <img src="img/close.svg" alt="Icon: close" class="modal__close" />
+          <a href="#" class="modal__close">
+            <img src="img/close.svg" alt="Icon: close" />
+          </a>
           <input
             type="text"
             class="input modal__input"

@@ -109,6 +109,15 @@
             &__text
                 margin-left: 0
                 margin-right: 0
+    .modal
+        &__overlay
+        &__form
+            flex-direction: column
+            align-items: flex-start
+        &__button
+            order: 1
+        &__info
+            margin-bottom: 15px
 @media ( max-width: 800px )
     @keyframes menu
         0%
@@ -298,6 +307,7 @@
     .footer
         &__input
             flex-basis: 100%
+
 @media ( max-width: 576px )
     .container
         max-width: 90%
@@ -383,6 +393,12 @@
         &-bottom
             &__item
                 margin-right: 5px
+    .modal
+        &__dialog
+            width: 300px
+            padding: 30px 40px
+        &__input, &__message, &__info
+            margin-bottom: 10px
 @media ( max-width: 480px )
     .hotel
         &-slider
@@ -419,3 +435,7 @@
         &-card
             &__button
                 padding: 8px 12px
+    .modal
+        &__dialog
+            width: 260px
+            padding: 20px 30px
