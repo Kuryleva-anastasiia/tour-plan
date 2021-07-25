@@ -1728,6 +1728,8 @@ template {
   top: 17px;
   right: 18px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .modal__input {
