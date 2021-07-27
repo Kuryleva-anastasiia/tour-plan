@@ -481,6 +481,7 @@
           >
             <input
               type="email"
+              pattern="/^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i"
               class="subscribe__input"
               placeholder="Your email address"
               name="email"
@@ -827,7 +828,7 @@
               <div class="footer__input-wrap">
                 <input
                   type="text"
-                  class="input footer__input"
+                  class="input footer__input name_input"
                   placeholder="Your Full Name*"
                   required
                   name="name"
@@ -891,7 +892,7 @@
           </button>
           <input
             type="text"
-            class="input modal__input"
+            class="input modal__input name_input"
             placeholder="Your Full Name*"
             required
             name="name"
@@ -929,6 +930,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -2324,10 +2324,6 @@ template {
   .card {
     width: 48%;
   }
-  .footer__input {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
 }
 
 @media (max-width: 576px) {
@@ -2458,6 +2454,11 @@ template {
   .footer-bottom__item {
     margin-right: 5px;
   }
+  .footer__input-wrap {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 15px;
+  }
   .modal__dialog {
     width: 300px;
     padding: 30px 40px;
@@ -2496,13 +2497,16 @@ template {
     width: 100%;
     padding: 18px 23px;
   }
+  .footer__input-wrap {
+    width: 100%;
+  }
   .footer__button {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
   .footer__info {
-    margin-bottom: 15px;
+    margin-top: 15px;
   }
   .footer__contact-us {
     margin-bottom: 30px;
