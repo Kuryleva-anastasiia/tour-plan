@@ -49,7 +49,6 @@ $(".form").each(function() {
   messages: {
     name: {
       required: "Please specify your name",
-      minlength: 2,
     },
     phone: {
       required: "Please specify your telephone",
@@ -150,3 +149,4 @@ ymaps.ready(init);
             iconColor: '#0095b6'
         }));
     }
+AOS.init();
