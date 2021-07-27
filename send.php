@@ -11,6 +11,7 @@ $message = $_POST['message'];
 $email = $_POST['email'];
 
 // Формирование самого письма
+// footer form
 $title = "Новое обращение Best Tour Plan";
 $body = "
 <h2>Новое обращение</h2>
@@ -18,10 +19,20 @@ $body = "
 <b>Телефон:</b>$phone<br><br>
 <b>Сообщение:</b><br>$message
 ";
+// newsletter form
 $email_title = "Подписка на рассылку";
 $email_body = "
 <h2>Новый запрос на рассылку</h2>
 <b>Почта:</b><br>$email
+";
+// view other options modal form
+$booking_title = "Новое обращение Best Tour Plan";
+$booking_body = "
+<h2>Новое обращение по просмотру других вариантов</h2>
+<b>Имя:</b>$name<br>
+<b>Телефон:</b>$phone<br>
+<b>Почта:</b>$email<br><br>
+<b>Сообщение:</b><br>$message
 ";
 
 // Настройки PHPMailer
@@ -52,9 +63,15 @@ if(isset($_POST['subscribe_button'])){
     $mail->Subject = $email_title;
     $mail->Body = $email_body; 
     header('Location: subscribe.html');
-} else {
+}
+if(isset($_POST['contact_button'])) {
     $mail->Subject = $title;
     $mail->Body = $body; 
+    header('Location: thankyou.html');
+}
+if(isset($_POST['options_button'])) {
+    $mail->Subject = $booking_title;
+    $mail->Body = $booking_body; 
     header('Location: thankyou.html');
 }
 
@@ -67,41 +84,3 @@ else {$result = "error";}
     $result = "error";
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
-
-
-
-// $email = new PHPMailer\PHPMailer\PHPMailer();
-
-// try {
-//     $email->isSMTP();   
-//     $email->CharSet = "UTF-8";
-//     $email->SMTPAuth   = true;
-//     // $email->SMTPDebug = 2;
-//     $email->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
-
-//     // Настройки вашей почты
-//     $email->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-//     $email->Username   = 'knastya76r@mail.ru'; // Логин на почте
-//     $email->Password   = '7irHfRY5z1ro393yQehh'; // Пароль на почте
-//     $email->SMTPSecure = 'ssl';
-//     $email->Port       = 465;
-//     $email->setFrom('knastya76r@mail.ru', 'Анастасия Курылева'); // Адрес самой почты и имя отправителя
-
-//     // Получатель письма
-//     $email->addAddress('knastya76@yandex.ru');
-
-
-// $email->isHTML(true);
-// $email->Subject = $email_title;
-// $email->Body = $email_body; 
-// // Проверяем отравленность сообщения
-// if ($email->send()) {header('location: subscribe.html');} 
-// else {$result = "error";}
-
-// } catch (Exception $e) {
-//     $result = "error";
-//     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
-// }
-
-
-// Отображение результата

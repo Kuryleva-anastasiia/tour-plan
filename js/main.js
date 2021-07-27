@@ -1,4 +1,5 @@
-var menuButton = document.querySelector('.menu-btn');
+
+  var menuButton = document.querySelector('.menu-btn');
 
 menuButton.addEventListener('click', function(){
   console.log('Клик');
@@ -8,6 +9,37 @@ menuButton.addEventListener('click', function(){
   document.querySelector('.menu-btn_middle').classList.toggle('menu-btn_middle_hidden');
   document.querySelector('.menu-btn_bottom').classList.toggle('menu-btn_bottom_rotate');
 });
+
+var modalButton = $(".booking__button");
+var closeModalButton = $(".modal__close");
+
+modalButton.on("click", function() {
+  openModal();
+});
+closeModalButton.on("click", function() {
+  closeModal();
+});
+
+
+function openModal() {
+  var modalOverlay = $(".modal__overlay");
+  var modalDialog = $(".modal__dialog");
+  modalOverlay.addClass("modal__overlay_visible");
+  modalDialog.addClass("modal__dialog_visible");
+  $(document).on('keydown', function(e){
+      if(e.which === 27) {
+      closeModal();
+    }
+  }); 
+}
+function closeModal() {
+  var modalOverlay = $(".modal__overlay");
+  var modalDialog = $(".modal__dialog");
+  modalOverlay.removeClass("modal__overlay_visible");
+  modalDialog.removeClass("modal__dialog_visible");
+}
+
+
 
 var hotelSwiper = new Swiper('.hotel-slider__container', {
   
