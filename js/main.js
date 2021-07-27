@@ -1,7 +1,7 @@
 
   var menuButton = document.querySelector('.menu-btn');
 
-menuButton.addEventListener('click', function(){
+  menuButton.addEventListener('click', function(){
   console.log('Клик');
   document.querySelector('.header__nav').classList.toggle('header__nav_mobile_visible');
   document.querySelector('body').classList.toggle('menu-opened');
@@ -39,7 +39,24 @@ function closeModal() {
   modalDialog.removeClass("modal__dialog_visible");
 }
 
+$(".form").each(function() {
+  $(this).validate({
+  messages: {
+    name: {
+      required: "Please specify your name"
+    },
+    phone: {
+      required: "Please specify your telephone"
+    },
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com"
+    }
+  }
+});
+});
 
+$('.tel_input').mask('+7 (999) 999-99-99');
 
 var hotelSwiper = new Swiper('.hotel-slider__container', {
   
