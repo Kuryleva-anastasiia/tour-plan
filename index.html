@@ -16,11 +16,6 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Best tour plan - Hotel Booking</title>
-    <!-- карта -->
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=9982d0ed-4709-4744-a277-06e0ec2be6de&lang=ru_RU"
-      type="text/javascript"
-    ></script>
   </head>
   <body>
     <header class="header header_mobile_fixed">
@@ -226,39 +221,74 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper hotel-slider__wrapper">
                 <div class="swiper-slide hotel-slider__slide">
-                  <img
-                    src="img/sliders/slide-1.jpg"
-                    class="hotel-slider__img"
-                    alt="Hotel photo"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="img/sliders/slide-1.webp"
+                      class="hotel-slider__img"
+                    />
+                    <img
+                      src="img/sliders/slide-1.jpg"
+                      alt="Hotel photo"
+                      class="hotel-slider__img"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide hotel-slider__slide">
-                  <img
-                    src="img/sliders/slide-2.jpg"
-                    class="hotel-slider__img"
-                    alt="Hotel photo"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="img/sliders/slide-2.webp"
+                      class="hotel-slider__img"
+                    />
+                    <img
+                      src="img/sliders/slide-2.jpg"
+                      alt="Hotel photo"
+                      class="hotel-slider__img"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide hotel-slider__slide">
-                  <img
-                    src="img/sliders/slide-3.jpg"
-                    class="hotel-slider__img"
-                    alt="Hotel photo"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="img/sliders/slide-3.webp"
+                      class="hotel-slider__img"
+                    />
+                    <img
+                      src="img/sliders/slide-3.jpg"
+                      alt="Hotel photo"
+                      class="hotel-slider__img"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide hotel-slider__slide">
-                  <img
-                    src="img/sliders/slide-4.jpg"
-                    class="hotel-slider__img"
-                    alt="Hotel photo"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="img/sliders/slide-4.webp"
+                      class="hotel-slider__img"
+                    />
+                    <img
+                      src="img/sliders/slide-4.jpg"
+                      alt="Hotel photo"
+                      class="hotel-slider__img"
+                    />
+                  </picture>
                 </div>
                 <div class="swiper-slide hotel-slider__slide">
-                  <img
-                    src="img/sliders/slide-5.jpg"
-                    class="hotel-slider__img"
-                    alt="Hotel photo"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="img/sliders/slide-5.webp"
+                      class="hotel-slider__img"
+                    />
+                    <img
+                      src="img/sliders/slide-5.jpg"
+                      alt="Hotel photo"
+                      class="hotel-slider__img"
+                    />
+                  </picture>
                 </div>
               </div>
               <!-- navigation buttons -->
@@ -318,7 +348,7 @@
               </button>
             </div>
             <!-- /.booking-wrapper -->
-            <div id="hotel-map" class="hotel-map"></div>
+            <div id="hotel-map" class="hotel-grid__map"></div>
             <!-- /.map -->
           </div>
           <!-- /.booking -->
@@ -414,9 +444,26 @@
               <h3 class="packages-card__title">LUX* Belle Mare</h3>
               <div class="packages-card__info">
                 <span class="packages-card__location"
-                  >1749 Wheeler Ridge Delaware</span
-                ><span class="packages-card__persons">2 x Guests</span
-                ><span class="packages-card__rooms">1 x Room</span>
+                  ><img
+                    src="img/map-pin-icon.svg"
+                    alt="Icon: map pin"
+                    class="packages-card__icon"
+                  />1749 Wheeler Ridge Delaware</span
+                ><span class="packages-card__persons">
+                  <img
+                    src="img/user-icon.svg"
+                    alt="Icon: person"
+                    class="packages-card__icon"
+                  />
+                  2 x Guests</span
+                ><span class="packages-card__rooms">
+                  <img
+                    src="img/home-icon.svg"
+                    alt="Icon: home"
+                    class="packages-card__icon"
+                  />
+                  1 x Room</span
+                >
               </div>
               <!-- /.packages-card__info -->
               <span class="packages-card__old-price">$ 8,500</span>
@@ -445,9 +492,26 @@
               <h3 class="packages-card__title">White Palace</h3>
               <div class="packages-card__info">
                 <span class="packages-card__location"
-                  >1749 Wheeler Ridge Delaware</span
-                ><span class="packages-card__persons">2 x Guests</span
-                ><span class="packages-card__rooms">1 x Room</span>
+                  ><img
+                    src="img/map-pin-icon.svg"
+                    alt="Icon: map pin"
+                    class="packages-card__icon"
+                  />1749 Wheeler Ridge Delaware</span
+                ><span class="packages-card__persons">
+                  <img
+                    src="img/user-icon.svg"
+                    alt="Icon: person"
+                    class="packages-card__icon"
+                  />
+                  2 x Guests</span
+                ><span class="packages-card__rooms">
+                  <img
+                    src="img/home-icon.svg"
+                    alt="Icon: home"
+                    class="packages-card__icon"
+                  />
+                  1 x Room</span
+                >
               </div>
               <!-- /.packages-card__info -->
               <span class="packages-card__old-price">$ 10,500</span>
@@ -476,9 +540,26 @@
               <h3 class="packages-card__title">Luxury Place</h3>
               <div class="packages-card__info">
                 <span class="packages-card__location"
-                  >1749 Wheeler Ridge Delaware</span
-                ><span class="packages-card__persons">2 x Guests</span
-                ><span class="packages-card__rooms">1 x Room</span>
+                  ><img
+                    src="img/map-pin-icon.svg"
+                    alt="Icon: map pin"
+                    class="packages-card__icon"
+                  />1749 Wheeler Ridge Delaware</span
+                ><span class="packages-card__persons">
+                  <img
+                    src="img/user-icon.svg"
+                    alt="Icon: person"
+                    class="packages-card__icon"
+                  />
+                  2 x Guests</span
+                ><span class="packages-card__rooms">
+                  <img
+                    src="img/home-icon.svg"
+                    alt="Icon: home"
+                    class="packages-card__icon"
+                  />
+                  1 x Room</span
+                >
               </div>
               <!-- /.packages-card__info -->
               <span class="packages-card__old-price">$ 4,500</span>
@@ -507,9 +588,26 @@
               <h3 class="packages-card__title">Hotel Five Star</h3>
               <div class="packages-card__info">
                 <span class="packages-card__location"
-                  >1749 Wheeler Ridge Delaware</span
-                ><span class="packages-card__persons">2 x Guests</span
-                ><span class="packages-card__rooms">1 x Room</span>
+                  ><img
+                    src="img/map-pin-icon.svg"
+                    alt="Icon: map pin"
+                    class="packages-card__icon"
+                  />1749 Wheeler Ridge Delaware</span
+                ><span class="packages-card__persons">
+                  <img
+                    src="img/user-icon.svg"
+                    alt="Icon: person"
+                    class="packages-card__icon"
+                  />
+                  2 x Guests</span
+                ><span class="packages-card__rooms">
+                  <img
+                    src="img/home-icon.svg"
+                    alt="Icon: home"
+                    class="packages-card__icon"
+                  />
+                  1 x Room</span
+                >
               </div>
               <!-- /.packages-card__info -->
               <span class="packages-card__old-price">$ 6,500</span>
@@ -572,11 +670,31 @@
                   <h3 class="reviews-profile__username">Megan Fox</h3>
                   <span class="reviews-profile__date">Stayed 18 Nov, 2019</span>
                   <div class="reviews-profile__rating">
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/star.svg" alt="Star" />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
                   </div>
                   <!-- /.reviews-profile__rating -->
                 </div>
@@ -601,19 +719,39 @@
                 <div class="reviews-profile">
                   <img
                     src="img/reviews-authors/reviews-avatar-2.jpg"
-                    alt="Photo: Kristina Miller"
                     class="reviews-profile__img"
+                    alt="Photo: Kristina Miller"
                   />
                   <h3 class="reviews-profile__username">Kristina Miller</h3>
                   <span class="reviews-profile__date"
                     >Stayed 15 July, 2021</span
                   >
                   <div class="reviews-profile__rating">
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/no-star.svg" alt="Star" />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/no-star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
                   </div>
                   <!-- /.reviews-profile__rating -->
                 </div>
@@ -633,19 +771,47 @@
             <div class="swiper-slide">
               <div class="reviews-slider__item">
                 <div class="reviews-profile">
-                  <img
-                    src="img/reviews-authors/reviews-avatar-3.jpg"
-                    alt="Photo: Robin Good"
-                    class="reviews-profile__img"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="img/reviews-authors/reviews-avatar-3.webp"
+                      class="reviews-profile__img"
+                    />
+                    <img
+                      data-src="img/reviews-authors/reviews-avatar-3.jpg"
+                      src="img/preload1x1.png"
+                      class="reviews-profile__img"
+                      alt="Photo: Robin Good"
+                    />
+                  </picture>
                   <h3 class="reviews-profile__username">Robin Good</h3>
                   <span class="reviews-profile__date">Stayed 21 Feb, 2020</span>
                   <div class="reviews-profile__rating">
-                    <img src="img/star.svg" alt="Star" />
-                    <img src="img/no-star.svg" alt="Star" />
-                    <img src="img/no-star.svg" alt="Star" />
-                    <img src="img/no-star.svg" alt="Star" />
-                    <img src="img/no-star.svg" alt="Star" />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/no-star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/no-star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/no-star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
+                    <img
+                      src="img/no-star.svg"
+                      alt="Star"
+                      class="reviews-profile__icon"
+                    />
                   </div>
                   <!-- /.reviews-profile__rating -->
                 </div>
@@ -690,7 +856,8 @@
             data-aos-duration="2000"
           >
             <img
-              src="img/activities/activity-1.jpg"
+              data-src="img/activities/activity-1.jpg"
+              src="img/preload1x1.png"
               alt="Activity: The curious corner of chamarel"
               class="card__img"
             />
@@ -705,7 +872,8 @@
             data-aos-duration="2000"
           >
             <img
-              src="img/activities/activity-2.jpg"
+              data-src="img/activities/activity-2.jpg"
+              src="img/preload1x1.png"
               alt="Activity: Gymkhana club golf course"
               class="card__img"
             />
@@ -720,7 +888,8 @@
             data-aos-duration="2000"
           >
             <img
-              src="img/activities/activity-3.jpg"
+              data-src="img/activities/activity-3.jpg"
+              src="img/preload1x1.png"
               alt="Activity: Tamarind falls hiking trip - full day"
               class="card__img"
             />
@@ -735,7 +904,8 @@
             data-aos-duration="2000"
           >
             <img
-              src="img/activities/activity-4.jpg"
+              data-src="img/activities/activity-4.jpg"
+              src="img/preload1x1.png"
               alt="Activity: The blue marine discovery quest"
               class="card__img"
             />
@@ -824,7 +994,7 @@
                 ><img
                   src="img/youtube.svg"
                   alt="Icon: Youtube"
-                  class="footer__icon" /></a
+                  class="footer__icon_youtube" /></a
               ><a href="#" class="footer__link"
                 ><img
                   src="img/instagram.svg"
@@ -905,26 +1075,29 @@
           <div class="footer__contact-us">
             <h3 class="footer__title footer__title_mb-3">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
-              <div class="footer__input-wrap">
-                <input
-                  type="text"
-                  class="input footer__input name_input"
-                  placeholder="Your Full Name*"
-                  required
-                  name="name"
-                />
+              <div class="footer__inputs">
+                <div class="footer__input-wrap">
+                  <input
+                    type="text"
+                    class="input footer__input name_input"
+                    placeholder="Your Full Name*"
+                    required
+                    name="name"
+                  />
+                </div>
+                <!-- /.footer__input-wrap -->
+                <div class="footer__input-wrap">
+                  <input
+                    type="tel"
+                    class="input footer__input tel_input"
+                    placeholder="Phone Number*"
+                    required
+                    name="phone"
+                  />
+                </div>
+                <!-- /.footer__input-wrap -->
               </div>
-              <!-- /.footer__form-wrap -->
-              <div class="footer__input-wrap">
-                <input
-                  type="tel"
-                  class="input footer__input tel_input"
-                  placeholder="Phone Number*"
-                  required
-                  name="phone"
-                />
-              </div>
-              <!-- /.footer__form-wrap -->
+              <!-- /.footer__inputs -->
               <textarea
                 class="footer__message"
                 placeholder="Message"
@@ -1005,6 +1178,11 @@
       <!-- /.model__dialog -->
     </div>
     <!-- /.modal -->
+    <!-- карта -->
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=9982d0ed-4709-4744-a277-06e0ec2be6de&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
