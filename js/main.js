@@ -41,19 +41,28 @@ function closeModal() {
 
 $(".form").each(function() {
   $(this).validate({
+    rules: {
+      email: {
+        pattern: /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i,
+      }
+    },
   messages: {
     name: {
-      required: "Please specify your name"
+      required: "Please specify your name",
     },
     phone: {
-      required: "Please specify your telephone"
+      required: "Please specify your telephone",
     },
     email: {
       required: "We need your email address to contact you",
-      email: "Your email address must be in the format of name@domain.com"
-    }
-  }
-});
+      email: "Your email address must be in the format of name@domain.com",
+      pattern: "Format of email should be: name@domain.com",
+    },
+  },
+  });
+  $(this).on('input', '.name_input', function() {
+    this.value = this.value.replace(/[^a-z\s]/gi, '');
+  })
 });
 
 $('.tel_input').mask('+7 (999) 999-99-99');
@@ -140,3 +149,4 @@ ymaps.ready(init);
             iconColor: '#0095b6'
         }));
     }
+AOS.init();

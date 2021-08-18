@@ -1817,6 +1817,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+  margin-top: 15px;
 }
 
 @media (max-width: 1200px) {
@@ -2019,9 +2020,6 @@ template {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-  .modal__info {
-    margin-bottom: 15px;
   }
 }
 
@@ -2324,10 +2322,6 @@ template {
   .card {
     width: 48%;
   }
-  .footer__input {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
 }
 
 @media (max-width: 576px) {
@@ -2458,12 +2452,17 @@ template {
   .footer-bottom__item {
     margin-right: 5px;
   }
+  .footer__input-wrap {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 15px;
+  }
   .modal__dialog {
     width: 300px;
     padding: 30px 40px;
   }
   .modal__input, .modal__message, .modal__info {
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -2496,13 +2495,16 @@ template {
     width: 100%;
     padding: 18px 23px;
   }
+  .footer__input-wrap {
+    width: 100%;
+  }
   .footer__button {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
   .footer__info {
-    margin-bottom: 15px;
+    margin-top: 15px;
   }
   .footer__contact-us {
     margin-bottom: 30px;
