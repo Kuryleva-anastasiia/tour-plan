@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -57,9 +57,9 @@
             <span class="user__name">Nathan</span>
           </a>
           <button class="menu-btn header-top__menu-btn">
-            <span class="menu-btn__line menu-btn_top"></span>
-            <span class="menu-btn__line menu-btn_middle"></span>
-            <span class="menu-btn__line menu-btn_bottom"></span>
+            <span class="menu-btn__line menu-btn__line_top"></span>
+            <span class="menu-btn__line menu-btn__line_middle"></span>
+            <span class="menu-btn__line menu-btn__line_bottom"></span>
           </button>
           <!-- /.menu-btn -->
         </div>
@@ -72,7 +72,7 @@
             <li class="nav-list__item nav-list__item_mobile_visible">
               <a
                 href="#"
-                class="user header-top__user header-top__user_mobile_visible"
+                class="user nav-list__user nav-list__user_mobile_visible"
               >
                 <img
                   src="img/user-avatar.jpg"
@@ -85,10 +85,7 @@
             <li class="nav-list__item nav-list__item_mobile_visible">
               <form
                 action="#"
-                class="
-                  search
-                  header-top__search header-top__search_mobile_visible
-                "
+                class="search nav-list__search nav-list__search_mobile_visible"
               >
                 <input
                   type="text"
@@ -423,7 +420,12 @@
                 <div
                   class="packages-card__price-wrap packages-card__price-wrap"
                 >
-                  <span class="packages-card__old-price_big">$ 10,500</span>
+                  <span
+                    class="
+                      packages-card__old-price packages-card__old-price_big
+                    "
+                    >$ 10,500</span
+                  >
                   <span class="packages-card__price">$ 3,000</span>
                 </div>
                 <!-- /.packages-card__price-wrap -->
@@ -884,7 +886,7 @@
               class="card__img"
             />
             <h3 class="card__name">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card activities__card -->
           <div
@@ -900,7 +902,7 @@
               class="card__img"
             />
             <h3 class="card__name">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card activities__card -->
           <div
@@ -916,7 +918,7 @@
               class="card__img"
             />
             <h3 class="card__name">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card activities__card -->
           <div
@@ -932,7 +934,7 @@
               class="card__img"
             />
             <h3 class="card__name">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card activities__card -->
         </div>
@@ -943,11 +945,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
+          <a href="#" class="logo footer__logo">
+            <img
             src="img/vertical-logo.svg"
             alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
           />
+          </a>
           <div class="footer-list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -1016,7 +1019,7 @@
                 ><img
                   src="img/youtube.svg"
                   alt="Icon: Youtube"
-                  class="footer__icon_youtube" /></a
+                  class="footer__icon footer__icon_youtube" /></a
               ><a href="#" class="footer__link"
                 ><img
                   src="img/instagram.svg"
@@ -1101,7 +1104,7 @@
                 <div class="footer__input-wrap">
                   <input
                     type="text"
-                    class="input footer__input name_input"
+                    class="input footer__input footer__input_name"
                     placeholder="Your Full Name*"
                     required
                     name="name"
@@ -1111,7 +1114,7 @@
                 <div class="footer__input-wrap">
                   <input
                     type="tel"
-                    class="input footer__input tel_input"
+                    class="input footer__input footer__input_tel"
                     placeholder="Phone Number*"
                     required
                     name="phone"
@@ -1167,14 +1170,14 @@
           </button>
           <input
             type="text"
-            class="input modal__input name_input"
+            class="input modal__input modal__input_name"
             placeholder="Your Full Name*"
             required
             name="name"
           />
           <input
             type="tel"
-            class="input modal__input tel_input"
+            class="input modal__input modal__input_tel"
             placeholder="Phone Number*"
             required
             name="phone"
@@ -1201,10 +1204,7 @@
     </div>
     <!-- /.modal -->
     <!-- карта -->
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=9982d0ed-4709-4744-a277-06e0ec2be6de&lang=ru_RU"
-      type="text/javascript"
-    ></script>
+    <script data-src="https://api-maps.yandex.ru/2.1/?apikey=9982d0ed-4709-4744-a277-06e0ec2be6de&lang=ru_RU" id="lazyMap"></script>
     <script src="js/jquery-3.6.0.min.js" defer></script>
     <script src="js/parallax.min.js" defer></script>
     <script src="js/swiper-bundle.min.js" defer></script>
