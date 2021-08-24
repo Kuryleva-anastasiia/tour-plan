@@ -183,11 +183,11 @@
           <div class="hotel-text">
             <div class="hotel-info hotel-text__info">
               <div class="hotel-stars hotel-info__stars">
-                <img src="img/star.svg" alt="star" />
-                <img src="img/star.svg" alt="star" />
-                <img src="img/star.svg" alt="star" />
-                <img src="img/star.svg" alt="star" />
-                <img src="img/star.svg" alt="star" />
+                <img src="img/star.svg" alt="star" class="hotel-stars__img" />
+                <img src="img/star.svg" alt="star" class="hotel-stars__img" />
+                <img src="img/star.svg" alt="star" class="hotel-stars__img" />
+                <img src="img/star.svg" alt="star" class="hotel-stars__img" />
+                <img src="img/star.svg" alt="star" class="hotel-stars__img" />
               </div>
               <!-- /.hotel-text__stars -->
 
@@ -346,7 +346,14 @@
             </div>
             <!-- /.booking-wrapper -->
             <div class="hotel-grid__map">
-              <iframe id="hotel-map" class="hotel-grid__map-iframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.0046814309244!2d79.80141631427134!3d7.5744669945377385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2c96110de8289%3A0x3fd7668bc2d85eb9!2sGrand%20Hilton%20Hotel!5e0!3m2!1sru!2sru!4v1629731396896!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <iframe
+                id="hotel-map"
+                class="hotel-grid__map-iframe"
+                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.0046814309244!2d79.80141631427134!3d7.5744669945377385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2c96110de8289%3A0x3fd7668bc2d85eb9!2sGrand%20Hilton%20Hotel!5e0!3m2!1sru!2sru!4v1629731396896!5m2!1sru!2sru"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
             </div>
             <!-- /.map -->
           </div>
@@ -653,30 +660,33 @@
     </section>
     <section class="newsletter">
       <div class="container">
-        <div class="newsletter-wrapper">
-          <h2 class="newsletter-title">
-            subscribe to our
-            <span class="newsletter-title__strong">Newsletter</span>
-          </h2>
-          <form
-            action="send.php"
-            method="POST"
-            class="subscribe newsletter__subscribe form"
-          >
-            <input
-              type="email"
-              pattern="/^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i"
-              class="subscribe__input"
-              placeholder="Your email address"
-              name="email"
-              required
-            />
-            <button class="subscribe__button" name="subscribe_button">
-              Send
-            </button>
-          </form>
+        <div class="newsletter-info">
+          <div class="newsletter-wrapper">
+            <h2 class="newsletter-title">
+              subscribe to our
+              <span class="newsletter-title__strong">Newsletter</span>
+            </h2>
+            <form
+              action="send.php"
+              method="POST"
+              class="subscribe newsletter__subscribe form"
+            >
+              <input
+                type="email"
+                pattern="/^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i"
+                class="subscribe__input"
+                placeholder="Your email address"
+                name="email"
+                required
+              />
+              <button class="subscribe__button" name="subscribe_button">
+                Send
+              </button>
+            </form>
+          </div>
+          <!-- /.newsletter-wrapper -->
         </div>
-        <!-- /.newsletter-wrapper -->
+        <!-- /.newsletter-info -->
       </div>
       <!-- /.container -->
     </section>
@@ -887,7 +897,7 @@
               alt="Activity: The curious corner of chamarel"
               class="card__img"
             />
-            <h3 class="card__name">The curious corner of chamarel</h3>
+            <h3 class="card__name">The curious corner of&nbsp;chamarel</h3>
             <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card activities__card -->
@@ -919,7 +929,9 @@
               alt="Activity: Tamarind falls hiking trip - full day"
               class="card__img"
             />
-            <h3 class="card__name">Tamarind falls hiking trip - full day</h3>
+            <h3 class="card__name">
+              Tamarind falls hiking trip&nbsp;-&nbsp;full day
+            </h3>
             <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card activities__card -->
@@ -948,10 +960,7 @@
       <div class="container">
         <div class="footer-wrapper">
           <a href="#" class="logo footer__logo">
-            <img
-            src="img/vertical-logo.svg"
-            alt="Logo: Best Tour Plan"
-          />
+            <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" />
           </a>
           <div class="footer-list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
@@ -1100,7 +1109,7 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-us">
-            <h3 class="footer__title footer__title_mb-3">Send us a message</h3>
+            <h3 class="footer__title">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__inputs">
                 <div class="footer__input-wrap">
@@ -1130,10 +1139,13 @@
                 placeholder="Message"
                 name="message"
               ></textarea>
-              <button class="button footer__button" name="contact_button">
-                Send
-              </button>
-              <span class="footer__info">* Required Fields</span>
+              <div class="footer__button-wrap">
+                <button class="button footer__button" name="contact_button">
+                  Send
+                </button>
+                <span class="footer__info">* Required Fields</span>
+              </div>
+              <!-- /.footer__button-wrap -->
             </form>
           </div>
           <!-- /.footer__contact-us -->
@@ -1206,7 +1218,7 @@
     </div>
     <!-- /.modal -->
     <!-- карта -->
-    
+
     <script src="js/jquery-3.6.0.min.js" defer></script>
     <script src="js/parallax.min.js" defer></script>
     <script src="js/swiper-bundle.min.js" defer></script>
