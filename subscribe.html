@@ -141,29 +141,26 @@
         <div class="hotel-wrapper">
           <div class="hotel-text">
             <div class="hotel-info hotel-text__info">
-              
-
-              <h1 class="hotel-info__name">Вы успешно подписались на рассылку!</h1>
-            <a href="index.html" style="text-decoration: none; color: #333333;">Вернуться на главную</a>
+              <h1 class="hotel-info__name">
+                You have been successfully subscribed!
+              </h1>
+              <a href="index.html" style="text-decoration: none; color: #333333"
+                >Return to the main page</a
+              >
             </div>
             <!-- /.hotel-info -->
           </div>
-          
         </div>
         <!-- /.hotel-wrapper -->
-        
       </div>
       <!-- /.container -->
     </section>
-    
+
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a href="index.html" class="logo footer__logo">
-            <img
-            src="img/vertical-logo.svg"
-            alt="Logo: Best Tour Plan"
-          />
+          <a href="#" class="footer__logo">
+            <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" />
           </a>
           <div class="footer-list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
@@ -233,7 +230,7 @@
                 ><img
                   src="img/youtube.svg"
                   alt="Icon: Youtube"
-                  class="footer__icon" /></a
+                  class="footer__icon footer__icon_youtube" /></a
               ><a href="#" class="footer__link"
                 ><img
                   src="img/instagram.svg"
@@ -312,29 +309,43 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-us">
-            <h3 class="footer__title footer__title_mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                required
-                name="name"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                required
-                name="phone"
-              />
+            <h3 class="footer__title footer__title_mb-0">Send us a message</h3>
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__inputs">
+                <div class="footer__input-wrap">
+                  <input
+                    type="text"
+                    class="input footer__input footer__input_name"
+                    placeholder="Your Full Name*"
+                    required
+                    name="name"
+                  />
+                </div>
+                <!-- /.footer__input-wrap -->
+                <div class="footer__input-wrap">
+                  <input
+                    type="tel"
+                    class="input footer__input footer__input_tel"
+                    placeholder="Phone Number*"
+                    required
+                    name="phone"
+                  />
+                </div>
+                <!-- /.footer__input-wrap -->
+              </div>
+              <!-- /.footer__inputs -->
               <textarea
                 class="footer__message"
                 placeholder="Message"
                 name="message"
               ></textarea>
-              <button class="button footer__button">Send</button>
-              <span class="footer__info">* Required Fields</span>
+              <div class="footer__button-wrap">
+                <button class="button footer__button" name="contact_button">
+                  Send
+                </button>
+                <span class="footer__info">* Required Fields</span>
+              </div>
+              <!-- /.footer__button-wrap -->
             </form>
           </div>
           <!-- /.footer__contact-us -->
@@ -362,9 +373,13 @@
       </div>
       <!-- /.container -->
     </footer>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/parallax.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/parallax.min.js" defer></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/jquery.mask.min.js" defer></script>
+    <script src="js/jquery.validate.min.js" defer></script>
+    <script src="js/additional-methods.min.js" defer></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
